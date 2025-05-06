@@ -1,3 +1,12 @@
+# Mitigating Space Environment Effects on RISC-V Processors- ISAE Supaero Research Project
+This repository contains the source code implementing softcore RISC-V processor
+intended to be able to mitigate space environment effects like [Single Event Upset (SEU)](https://en.wikipedia.org/wiki/Single-event_upset).
+
+This project derives from [cva6-softcore-contest](https://github.com/ThalesGroup/cva6-softcore-contest?tab=Apache-2.0-3-ov-file) therefore the source code and sections of the documentation
+below originate from that repository.
+
+The licensing of this project remains in compliance with the original licensing.
+
 # Getting started
 
 To get more familiar with CVA6 architecture, a partial documentation is available:
