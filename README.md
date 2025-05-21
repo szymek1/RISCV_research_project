@@ -89,6 +89,18 @@ When the bitstream is loaded, the green LED `done` lights up.
 
 Now, the hardware is ready and the hyperterminal is connected to the UART output of the FPGA. We can now start the software.
 
+### Troubleshooting
+
+1. Make sure to modify ```~/.bashrc``` by adding at the end the following line: ```source /tools/Xilinx/Vivado/2024.2/settings64.sh``` (or which ever else where ```settings64.sh``` resides).
+2. Localize [XSCT](https://docs.amd.com/r/en-US/ug1165-zynq-embedded-design-tutorial/Vivado-Design-Suite) and add it to the PATH (for convinence update ```~/.bashrc``` with ```export PATH="/tools/Xilinx/Vivado/2024.2/xsct-trim/bin:$PATH"``` after sourcing Xilinx).
+3. ***Don't*** plug UART cable to any USB adapter as it will be an extra effort to connect it to the serial terminal like with ```screen```! ***Plug*** it directly to the computer.
+4. Apparently, it is always required to run:
+```
+$ make program_cva6_fpga
+```
+
+before making the connection to the board.
+
 ## Get started with software environment
 
 The executables of MNIST & CoreMark applications are already available in **sw/app**, but can be recompiled. 
